@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Hermes Personal Backup 的資料存取、加密備份、保存、撤銷與刪除方式。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>隱私權政策｜Hermes Personal Backup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar"><a class="brand" href="index.html">Hermes Personal Backup</a><nav aria-label="主要導覽"><a href="index.html">工具說明</a><a aria-current="page" href="privacy.html">隱私權政策</a></nav></header>
+  <main class="policy">
+    <p class="eyebrow">資料處理說明</p><h1>隱私權政策</h1>
+    <p class="lead">本政策說明私人使用的 Hermes Personal Backup 與其公開說明網站如何處理資料，不延伸承諾其他 Hermes 功能、模型服務或第三方產品的資料處理方式。</p>
+    <aside class="notice">生效及更新日期：2026 年 10 月 15 日。備份流程仍在建置與驗收中；本政策區分預定機制與目前狀態，不代表定期備份或完整復原能力已驗收。</aside>
+    <section><h2>一、使用範圍與管理者</h2><p>本工具由 GitHub 帳號 <a href="https://github.com/unpluggedstage">unpluggedstage</a> 的持有人管理，只供持有人備份及復原自己的 Hermes 助手環境，不提供一般訪客申請或使用備份服務。</p></section>
+    <section><h2>二、可能處理的資料</h2><ul><li>經持有人核准的本機設定、記憶、對話或工作狀態資料庫、排程、自訂程式、插件與復原所需清單。來源內容可能包含個人資料或第三方服務授權資訊。</li><li>Google 授權所產生的本機 OAuth 憑證，以及帳號與儲存配額資訊，用來確認目的帳號、維持連線及檢查空間。</li><li>加密備份檔案、必要的儲存庫結構與操作結果，用於備份、完整性查核及復原。</li></ul><p>Google Drive 上既有郵件、文件或試算表不會因這項備份授權而自動被列入來源。備份範圍須由持有人另行核准。</p></section>
+    <section><h2>三、Google 資料的用途與權限</h2><p>預定使用 <code>drive.file</code> 授權範圍，存取此應用程式建立或獲授權存取的檔案。用途限於建立與維護私人加密備份、讀回驗證，以及依核准保留規則整理備份。此權限不是 Google Drive 全部檔案的完整存取權，也不是單一資料夾的安全隔離保證。</p><p>OAuth 憑證由本機工具使用，不放入公開網站或公開儲存庫。備份工具不使用這項授權存取 Gmail 或行事曆。Google 帳號及服務本身的資料處理另受 Google 政策規範。</p></section>
+    <section><h2>四、儲存、傳輸與安全</h2><p>規劃在本機建立一致性快照後使用 restic 加密，再以 rclone 傳輸至持有人核准的 Google Drive。授權檔與自動備份所需密碼檔須限制本機讀取權限；解密密碼另由持有人離機保存。需要納入備份的設定與憑證，應在加密後才傳送。</p><p>加密不能消除所有風險。備份工具或本機管理者在工作時可能接觸來源明文；持有解密密碼者可解密備份。本機故障、密碼遺失、授權失效或備份失敗，都可能影響復原。不得將「建立備份檔」視為完整復原已驗證。</p></section>
+    <section><h2>五、第三方服務與資料揭露</h2><p>Google Drive 提供雲端儲存與 API。restic 與 rclone 是由持有人在本機執行的工具；本方案不因使用它們而將備份交由其開發者代管。GitHub Pages 預定只託管公開說明頁，不接收備份或 OAuth 回呼。</p><p>本備份功能不將資料出售、不以廣告投放或模型訓練為目的使用資料，也不需要將備份內容交給模型進行推理。這不構成對其他助手功能、Google、GitHub 或其他獨立服務的隱私政策承諾。</p></section>
+    <section><h2>六、保存期限、刪除與撤銷</h2><p>預定保留 14 個每日、8 個每週、6 個每月時間區間的備份；此規則仍須完成首次備份、清理預覽與驗收後才啟用。實際保留可能因失敗、重疊區間或尚未清理而不同，並非固定份數保證。</p><p>持有人可在 Google 帳號的第三方連線設定中撤銷授權，以阻止後續存取。撤銷授權不會自動刪除既有備份、本機來源或儲存的憑證副本。刪除雲端備份、清空垃圾桶及清理本機副本須分別處理，並遵循相關服務的保存機制；需要復原的資料應先確認安全副本。</p></section>
+    <section><h2>七、公開網站的訪客資料</h2><p>本網站不設登入表單、資料上傳、分析追蹤碼、廣告或外部字型，也不由網站程式設定 Cookie。託管服務 GitHub 仍可能依其政策處理 IP 位址、請求與技術紀錄；請參閱 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub 隱私權聲明</a>。網站無法代表託管商保證完全不記錄訪問資訊。</p></section>
+    <section><h2>八、聯絡與政策更新</h2><p>一般問題請透過 <a href="https://github.com/unpluggedstage/hermes-backup-info/issues">GitHub Issues</a> 提出。Issues 為公開留言，請勿公開提交憑證、解密密碼、備份內容或第三人的個人資料。本工具僅供持有人本人使用，資料管理與刪除由持有人直接操作。</p><p>若備份來源、目的地、權限或資料用途變更，須先由持有人核准，並同步更新本政策及頁面日期。</p></section>
+  </main>
+  <footer><a href="index.html">返回工具說明</a><span>更新日期：2026-10-15</span></footer>
+</body>
+</html>
