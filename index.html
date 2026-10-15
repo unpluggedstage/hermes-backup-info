@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Hermes Personal Backup 私人備份工具的用途、資料處理方式與隱私權說明。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Hermes Personal Backup｜工具說明</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar"><a class="brand" href="index.html">Hermes Personal Backup</a><nav aria-label="主要導覽"><a aria-current="page" href="index.html">工具說明</a><a href="privacy.html">隱私權政策</a></nav></header>
+  <main>
+    <p class="eyebrow">私人使用 · 備份與復原</p>
+    <h1>保留必要資料，<br>為日後復原做好準備。</h1>
+    <p class="lead">Hermes Personal Backup 是由帳號持有人自行管理的私人備份工具，用來保存個人 Hermes 助手的必要設定、工作狀態與自訂程式，協助在設備故障或更換設備時重建環境。</p>
+    <aside class="notice"><strong>目前狀態：建置中。</strong>定期雲端備份與完整復原驗收尚未完成；本頁不是備份成功或資料可完整復原的保證。</aside>
+    <section><h2>工具如何運作</h2><ol><li>由持有人核准需要備份的來源與目的帳號。</li><li>在本機準備一致性快照，使用 restic 加密，再由 rclone 傳輸至指定 Google Drive。</li><li>另行檢查下載、解密與復原結果；排程、保留期限與復原能力須經驗收後才正式啟用。</li></ol><p>備份流程不需要模型推理。本工具不提供公眾註冊、線上查詢或網站上傳服務，也不是 Google 或 Hermes 官方服務。</p></section>
+    <section><h2>Google Drive 授權用途</h2><p>Google OAuth 授權只供本機備份工具連接持有人指定的 Drive。預定使用 <code>drive.file</code> 範圍，管理此應用程式建立或獲授權存取的備份檔案，包括上傳、讀回驗證及依核准規則整理舊備份。</p><p>本工具不以 Google Drive 備份授權讀取 Gmail 或行事曆，也不將 Drive 上原有的郵件、試算表或文件自動視為備份來源。原始資料若需要另行備份，必須另訂範圍。</p></section>
+    <section><h2>公開說明，不公開備份</h2><p>這個網站只提供工具介紹及隱私權政策。不承接 OAuth 回呼、不保存登入憑證、不讓訪客讀取備份。Google 登入由持有人在 Google 官方頁面親自完成，備份資料不透過這個網站傳送。</p><a class="button" href="privacy.html">閱讀隱私權政策 <span aria-hidden="true">→</span></a></section>
+    <section class="contact"><h2>管理與聯絡</h2><p>維護者：GitHub 帳號 <a href="https://github.com/unpluggedstage">unpluggedstage</a>。此工具只供持有人本人使用；備份的存取、撤銷授權與刪除由持有人自行管理。</p><p>一般問題請使用 <a href="https://github.com/unpluggedstage/hermes-backup-info/issues">GitHub Issues</a>。Issues 為公開留言，請勿張貼 Token、Client Secret、解密密碼、備份內容或第三人的個人資料。</p></section>
+  </main>
+  <footer><span>Hermes Personal Backup</span><a href="privacy.html">隱私權政策</a><span>更新日期：2026-10-15</span></footer>
+</body>
+</html>
